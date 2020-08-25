@@ -27,6 +27,7 @@ import './UserCommon.less'
           </RadioGroup>
         </FormItem>
         <FormItem prop="accountname" :label="form.selectedLoginType + ':'">
+          <div v-if="form.selectedLoginType === '手机号'">手机号登录暂不可用</div>
           <Input type="text" v-model="form.accountname"></Input>
         </FormItem>
         <FormItem prop="password" label="密码:">
