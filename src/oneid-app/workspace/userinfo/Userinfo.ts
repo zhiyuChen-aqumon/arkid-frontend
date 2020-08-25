@@ -208,7 +208,8 @@ class EditInfo extends Vue {
       </div>
 
       <UserInfoList :user="user" />
-
+      <!-- TODO -->
+      以上信息仅供参考, 钉钉上的会覆盖掉所有改动
     </div>
   </div>
 
