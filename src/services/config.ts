@@ -85,7 +85,8 @@ export class Config {
 
   static async partialUpdate(config: models.Config) {
     const data = config.toData ? config.toData() : config
-    delete data.company_config;
+    // TODO longguikeji/arkid-frontend/pull/57
+    // delete data.company_config;
     return http.patch(this.url(), data)
       .then(x => models.Config.fromData(x.data))
   }
